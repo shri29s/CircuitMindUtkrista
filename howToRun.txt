@@ -1,0 +1,14 @@
+npm packages:
+	npm install react express.js chart.js firebase.js
+
+Frontend:
+	React is used for the frontend.
+	
+	Use command:
+	npm start
+
+Backend:
+	Express.js is used for the backend.
+	
+	Use command:
+	node app.js

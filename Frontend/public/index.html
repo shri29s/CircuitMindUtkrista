@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Quality Monitoring Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Button styling (simple 'i' icon) */
+    #btn {
+      background-color: #333333;
+      border-radius: 100%;
+      margin: 5px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    /* Styling for the info box (tooltip-like) */
+    .info-div {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 10%;
+      transform: translateX(-50%);
+      background-color: #333333;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 200px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="box">
+    <h2 class="safe">Green: Safe</h2>
+    <h2 class="unsafe">Yellow: Warning</h2>
+    <h2 class="warning">Red: Unsafe</h2>
+  </div> -->
+  <button id="btn" onclick="toggleInfo()">i</button>
+  <div class="info-div" id="infoDiv">
+    <h2 class="safe">Green: Safe</h2>
+    <h2 class="unsafe">Yellow: Warning</h2>
+    <h2 class="warning">Red: Unsafe</h2>
+  </div>
+  <div id="root"></div>
+
+  <script>
+    // Function to toggle the visibility of the info div
+    function toggleInfo() {
+      var infoDiv = document.getElementById("infoDiv");
+      if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+        infoDiv.style.display = "block";
+      } else {
+        infoDiv.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+/* Dark-themed modern style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff; /* White text for header */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.param-card {
+  background-color: #1e1e1e; /* Dark card background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.param-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+  background-color: #242424; /* Slightly lighter card on hover */
+}
+
+.param-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #bbbbbb; /* Lighter text for titles */
+}
+
+.param-card p {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.safe {
+  color: #2ecc71; /* Green for safe */
+}
+
+.warning {
+  color: #f39c12; /* Orange for warning */
+}
+
+.unsafe {
+  color: #e74c3c; /* Red for unsafe */
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #a0a0a0; /* Lighter text for card titles */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .param-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Subtle animations */
+.param-card {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography improvements */
+body {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.param-card h2 {
+  font-weight: 600;
+}
+
+/* Utility styles */
+.box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #1e1e1e; /* Dark background for boxes */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: fit-content;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; /* Darker thumb */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Lighter thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212; /* Dark scrollbar track */
+}
+
+/* Enhancing button styles */
+button {
+  background-color: #1dbf73; /* Green button background */
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #16a34a; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 191, 115, 0.6); /* Green focus ring */
+}
+
+/* Adding improved form input styles */
+input[type="text"], input[type="number"], select {
+  background-color: #333; /* Dark input field background */
+  color: #e0e0e0; /* Light text color */
+  border: 1px solid #555; /* Dark border for inputs */
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  background-color: #444; /* Darker background on focus */
+  border-color: #1dbf73; /* Green border on focus */
+}
+
+/* Improved table styling for dark theme */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+td {
+  background-color: #242424;
+  color: #e0e0e0;
+}
+
+tr:hover {
+  background-color: #333; /* Slight darkening on hover */
+}
+
+tr:nth-child(even) td {
+  background-color: #1e1e1e; /* Alternating row colors */
+}
+

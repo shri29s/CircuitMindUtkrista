@@ -1,0 +1,10 @@
+/* Importing styles from styles.css */
+@import './styles.css';
+
+/* Specific React component styling can be added here if needed */
+
+/* Adjust card style for better spacing */
+.card {
+  width: 200px;
+  margin: 15px;
+}
